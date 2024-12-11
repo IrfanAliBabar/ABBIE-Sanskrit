@@ -1,3 +1,6 @@
+<div align="center">
+  <img src="ITSERR.png" alt="Alt Text" width="200">
+</div>
 
 **ABBIE: Attention-Based BI-Encoders for Predicting Where to Split Compound Sanskrit Words**
 
