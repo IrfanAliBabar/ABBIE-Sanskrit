@@ -1,7 +1,5 @@
-<div style="position: relative; height: 200px;">
-  <div style="position: absolute; top: 0; left: 0;">
-    <img src="ITSERR.png" alt="Alt Text" width="200">
-  </div>
+<div align="center">
+  <img src="ITSERR.png" alt="Alt Text" width="200">
 </div>
 
 # ABBIE: Attention-Based BI-Encoders for Predicting Where to Split Compound Sanskrit Words
