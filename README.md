@@ -1,5 +1,3 @@
-![image](https://github.com/user-attachments/assets/b5ed6ea3-4f13-4def-ab07-7083cfae8328)
-
 
 **ABBIE: Attention-Based BI-Encoders for Predicting Where to Split Compound Sanskrit Words**
 
