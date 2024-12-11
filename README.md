@@ -8,8 +8,4 @@ We propose a novel deep-learning method that uses **two bi-encoders to encode ch
 
 ABBIE has been implemented in Python 3.10.14 with Keras API running on the TensorFlow backend. 
 
-We used 2 attention heads in the multi-head attention layer.
-
-We used batches of size 64 and trained the model for 40 epochs by the Adam optimizer.
-
 We adopted the mean squared error (MSE) as a loss function.
