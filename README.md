@@ -4,3 +4,4 @@ This project implements the prediction of the split location in the Sanskrit com
  a few of them are semantically meaningful.
  
 We propose a novel deep-learning method that uses **two bi-encoders and a multi-head attention** module to predict the valid split location in Sanskrit compound words.
+![Split_3](https://github.com/user-attachments/assets/dca22be7-4a7a-4b74-a583-0f2c3b9400df)
