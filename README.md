@@ -2,7 +2,7 @@
   <img src="ITSERR.png" alt="Alt Text" width="200">
 </div>
 
-**ABBIE: Attention-Based BI-Encoders for Predicting Where to Split Compound Sanskrit Words**
+# ABBIE: Attention-Based BI-Encoders for Predicting Where to Split Compound Sanskrit Words
 
 This project implements the prediction of the split location in the Sanskrit compound words. 
 
