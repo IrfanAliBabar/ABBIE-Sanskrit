@@ -5,4 +5,10 @@ This project implements the prediction of the split location in the Sanskrit com
  
 We propose a novel deep-learning method that uses **two bi-encoders and a multi-head attention** module to predict the valid split location in Sanskrit compound words.
 
-ABBIE has been implemented in Python 3.10.14 with Keras API running on the TensorFlow backend. We used a character embedding size of 16, bi-directional encoders with 128 units.  We used 2 attention heads in the multi-head attention layer and dropout layer 0.5 after the multi-head attention layer and the normal ization layer. We used batches of size 64 and trained the model for 40 epochs by the Adam optimizer using a workstation equipped with an NVIDIA GeForce RTX2070GPU.The total number ofrainable parameters in our model is 150,737. We adopted the mean squared error (MSE) as a loss function
+ABBIE has been implemented in Python 3.10.14 with Keras API running on the TensorFlow backend. 
+
+We used 2 attention heads in the multi-head attention layer.
+
+We used batches of size 64 and trained the model for 40 epochs by the Adam optimizer.
+
+We adopted the mean squared error (MSE) as a loss function.
