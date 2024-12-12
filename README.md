@@ -3,9 +3,9 @@
 </div>
 
 # ABBIE: Attention-Based BI-Encoders for Predicting Where to Split Compound Sanskrit Words
-Irfan Ali, Liliana Lo Presti, Igor Spano', Marco La Cascia
-Department of Engineering, University of Palermo, Palermo, Italy
-Department of Cultures and Society, University of Palermo, Palermo, Italy
+Irfan Ali, Liliana Lo Presti, Igor Spano', Marco La Cascia 
+
+University of Palermo, Palermo, Italy
 
 ## This project implements the prediction of the split location in the Sanskrit compound words. 
 
