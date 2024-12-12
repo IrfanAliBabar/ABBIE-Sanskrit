@@ -1,5 +1,6 @@
 <div align="center">
-  <img src="ITSERR.png" alt="Alt Text" width="200">
+  <img src="ITSERR.png" alt="Alt Text" width="200" style="display: inline;">
+  <img src="unipa-logo.jpg" alt="Alt Text" width="200" style="display: inline;">
 </div>
 
 # ABBIE: Attention-Based BI-Encoders for Predicting Where to Split Compound Sanskrit Words
