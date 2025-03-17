@@ -123,7 +123,7 @@ def train_and_save_model(train_data, model_save_path,test_data ):
 def predict_and_evaluate(test_data, model, char_to_index, max_seq_length):
     predicted_starts = []
     correct_predictions = 0
-    Sandhee-window = 4
+    Sandhee_window = 4
 
     for i in range(len(test_data)):
         test_word = test_data[i][3]
@@ -133,12 +133,12 @@ def predict_and_evaluate(test_data, model, char_to_index, max_seq_length):
         predictions = model.predict(test_word_idx).reshape((max_seq_length))
         #print(test_data[i])
         #print(predictions)
-        #print(max_seq_length, Sandhee-window)
+        #print(max_seq_length, Sandhee_window)
 
         max_sum = 0
         max_start = 0
-        for j in range(max_seq_length - Sandhee-window):
-            sum_preds = np.sum(predictions[j:j + Sandhee-window])
+        for j in range(max_seq_length - Sandhee_window):
+            sum_preds = np.sum(predictions[j:j + Sandhee_window])
             if sum_preds > max_sum:
                 max_sum = sum_preds
                 max_start = j
