@@ -115,46 +115,39 @@ def train_and_save_model(train_data, model_save_path,test_data ):
 
 
 
-    predicted_starts, accuracy = predict_and_evaluate(test_data, model, char_to_index, max_seq_length)
+    pred_start_indices, accuracy = evaluate_predictions(data, model, char_to_idx, seq_length_limit):
     print('predicted_starts:', predicted_starts)
     print("accuracy:", accuracy)
-    return model, char_to_index, max_seq_length
+    return model, char_to_idx, seq_length_limit
 
-def predict_and_evaluate(test_data, model, char_to_index, max_seq_length):
-    predicted_starts = []
-    correct_predictions = 0
-    Sandhee_window = 4
+def evaluate_predictions(data, model, char_to_idx, seq_length_limit):
+    pred_start_indices = []
+    correct_count = 0
+    window_size = 4
 
-    for i in range(len(test_data)):
-        test_word = test_data[i][3]
-        test_word_idx = [char_to_index.get(char, char_to_index['$']) for char in test_word]
-        test_word_idx = pad_sequences([test_word_idx], maxlen=max_seq_length, padding="post", value=char_to_index['$'])
+    for sample in data:
+        word_to_predict = sample[3]
+        word_indices = [char_to_idx.get(char, char_to_idx['$']) for char in word_to_predict]
+        padded_indices = pad_sequences([word_indices], maxlen=seq_length_limit, padding="post", value=char_to_idx['$'])
 
-        predictions = model.predict(test_word_idx).reshape((max_seq_length))
-        #print(test_data[i])
-        #print(predictions)
-        #print(max_seq_length, Sandhee_window)
+        output_probs = model.predict(padded_indices).reshape((seq_length_limit))
 
-        max_sum = 0
-        max_start = 0
-        for j in range(max_seq_length - Sandhee_window):
-            sum_preds = np.sum(predictions[j:j + Sandhee_window])
-            if sum_preds > max_sum:
-                max_sum = sum_preds
-                max_start = j
+        max_value = 0
+        start_index = 0
+        for idx in range(seq_length_limit - window_size):
+            window_sum = np.sum(output_probs[idx:idx + window_size])
+            if window_sum > max_value:
+                max_value = window_sum
+                start_index = idx
 
-        predicted_starts.append(max_start)
-        true_start = test_data[i][4]
-        #print(true_start, max_start)
-        #input('_')
-        if max_start == true_start:
-            correct_predictions += 1
+        pred_start_indices.append(start_index)
+        true_start_index = sample[4]
 
-    accuracy = correct_predictions / len(test_data)
-    return predicted_starts, accuracy
+        if start_index == true_start_index:
+            correct_count += 1
 
-
-
+    accuracy = correct_count / len(data)
+    return pred_start_indices, accuracy
 
 if __name__ == "__main__":
     dataset_path = 'C:/Users/....../Sanskrit_dataset.csv'
