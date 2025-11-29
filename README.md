@@ -11,6 +11,6 @@ Irfan Ali, Liliana Lo Presti, Igor Spano', Marco La Cascia
 
 Recognizing the exact location of splits in a compound word is difficult since several possible splits can be found, but only a few are semantically meaningful.
  
-We propose a novel deep-learning method that uses **two bi-encoders to encode character-level contextual information for direct and reverse sequence and multi-head attention** module to predict the valid split location in Sanskrit compound words.
+We propose a novel deep-learning method that uses **two bi-encoders to encode character-level contextual information for direct and reverse sequence and a multi-head attention** module to predict the valid split location in Sanskrit compound words.
 
-ABBIE has been implemented in Python 3.10.14 with Keras API running on the TensorFlow backend and adopted the mean squared error (MSE) as a loss function.
+ABBIE has been implemented in Python 3.10.14 with Keras API running on the TensorFlow backend and adopted the mean squared error (MSE) as a loss function. The dataset is preprocessed with a similar technique mentioned in publicly available code, to which we compare our results.  
